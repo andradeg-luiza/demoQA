@@ -1,103 +1,102 @@
-## Ferramentas utilizadas
+## Tools Used
 
-# Ferramentas e Padrões
+### Tools and Patterns
 
 * <img src ="https://img.icons8.com/color/35/000000/javascript.png" width="30"/>
 * <img src="https://www.cypress.io/_astro/navbar-brand.D87396b0.svg" width="55"/>
 * <img src="https://raw.githubusercontent.com/cucumber/.github/refs/heads/main/docs/img/cucumber-open-logo.png" width="130"/>
-* **Padrão Page Objects**
+* **Page Objects Pattern**
 
-## Resumo:  
+## Summary:
 
-  
-O projeto está dividido em duas partes. A primeira delas consiste em automação com foco em API e a segunda com  foco em automação de elementos visuais. 
-
----
-
-## Regras gerais:  
-
-A automação do frontend será feita com JavaScript, Cypress e Cucumber. Também será usado padrão Page Objects e versionado com GitHub.  
-A automação da API também será implmentada utilizando Cypress, fazendo com que todos os steps sejam executados de forma contínua e com uma única execução.  
+The project is divided into two parts. The first focuses on API automation, and the second focuses on automation of visual elements.
 
 ---
 
-### Automação API 
+## General Guidelines:
 
-Resume-se em utilizar algumas APIs para criar um usuário, autorizá-lo, listar os livros disponíveis no Sistema, reservar duas opções a sua escolha, e ao final, listar os detalhes do usuário criado com os livros reservados.
-O Swagger do desafio para consulta  encontra-se em: https://demoqa.com/swagger/.
+Frontend automation will be carried out using JavaScript, Cypress, and Cucumber. The Page Objects pattern will also be used and versioned with GitHub.  
+API automation will also be implemented using Cypress, ensuring that all steps are executed continuously with a single run.
 
-**Passo a Passo**:
+---
 
-* Criar um usuário (https://demoqa.com/Account/v1/User)
+### API Automation
 
-* Gerar um token de acesso (https://demoqa.com/Account/v1/GenerateToken)
+This involves using several APIs to create a user, authorize them, list available books in the system, reserve two books of choice, and finally, list the details of the created user along with the reserved books.  
+The Swagger for the challenge can be consulted at: https://demoqa.com/swagger/.
 
-* Confirmar se o usuário criado está autorizado (https://demoqa.com/Account/v1/Authorized)
+**Step-by-Step**:
 
-* Listar os livros disponíveis (https://demoqa.com/BookStore/v1/Books)
+* Create a user (https://demoqa.com/Account/v1/User)
 
-* Alugar dois livros de livre escolha (https://demoqa.com/BookStore/v1/Books)
+* Generate an access token (https://demoqa.com/Account/v1/GenerateToken)
 
-* Listar os detalhes do usuário com os livros escolhidos (https://demoqa.com/Account/v1/User/{userID})
+* Confirm if the created user is authorized (https://demoqa.com/Account/v1/Authorized)
 
+* List available books (https://demoqa.com/BookStore/v1/Books)
 
-### Automação Frontend
+* Rent two books of choice (https://demoqa.com/BookStore/v1/Books)
 
-#### Parte 1
+* List user details with the selected books (https://demoqa.com/Account/v1/User/{userID})
 
-**Passo a Passo**:
+### Frontend Automation
 
-* Acessar o site https://demoqa.com/
+#### Part 1
 
-* Escolher a opção Forms na página inicial
+**Step-by-Step**:
 
-* Clicar no submenu Practice Form
+* Access the website https://demoqa.com/
 
-* Preencher todo o formulário com valores aleatórios
+* Select the "Forms" option on the homepage
 
-* O Arquivo utilizado para upload, precisa ser um .txt qualquer, e precisa estar na devida pasta do github ao ser publicado o projeto
+* Click on the "Practice Form" submenu
 
-* Submter o formulário
+* Fill out the entire form with random values
 
-* Garantir que um popup foi aberto após o submit
+* The file used for upload must be any `.txt` file and must be present in the appropriate GitHub folder when the project is published
 
-* Fechar o popup
+* Submit the form
 
+* Ensure that a popup was opened after submission
 
-#### Parte 2
+* Close the popup
 
-**Passo a Passo**:
+#### Part 2
 
-* Acessar o site https://demoqa.com/
+**Step-by-Step**:
 
-* Escolher a opção Alerts, Frame & Windows na página inicial
+* Access the website https://demoqa.com/
 
-* Clicar no submenu Browser Windows
+* Select the "Alerts, Frame & Windows" option on the homepage
 
-* Clicar no botão new Windows
+* Click on the "Browser Windows" submenu
 
-* Certifica-se que uma nova janela foi aberta, e validar a msg “This is a sample page”
+* Click the "new Windows" button
 
-* Fechar a nova janela aberta
+* Ensure that a new window was opened, and validate the message “This is a sample page”
 
-#### Parte 3
+* Close the newly opened window
 
-**Passo a Passo**:
+#### Part 3
 
-* Acessar o site https://demoqa.com/
+**Step-by-Step**:
 
-* Escolher a opção Elements na página inicial
+* Access the website https://demoqa.com/
 
-* Clicar no submenu Web Tables
+* Select the "Elements" option on the homepage
 
-* Criar um novo registro
+* Click on the "Web Tables" submenu
 
-* Editar o novo registro criado
+* Create a new record
 
-* Deletar o novo registro criado.
+* Edit the newly created record
 
-**Adicionais**:
+* Delete the newly created record
 
-* Criar 12 novos registros de forma dinâmica através do cucumber
+**Additional Tasks**:
 
-* Deletar todos os novos registros criados
+* Dynamically create 12 new records using Cucumber
+
+* Delete all newly created records
+
+---
