@@ -1,16 +1,17 @@
 {
-  "name": "demoqa",
-  "version": "1.0.0",
-  "description": "* <img src =\"https://img.icons8.com/color/35/000000/javascript.png\" width=\"30\"/>\r * <img src=\"https://www.cypress.io/_astro/navbar-brand.D87396b0.svg\" width=\"55\"/>\r * <img src=\"https://raw.githubusercontent.com/cucumber/.github/refs/heads/main/docs/img/cucumber-open-logo.png\" width=\"130\"/>\r * **Page Objects Pattern**",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": "cypress open"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cypress": "^13.15.2"
-  }
+	"name": "demoqa",
+	"version": "1.0.0",
+	"description": "* <img src =\"https://img.icons8.com/color/35/000000/javascript.png\" width=\"30\"/>\r * <img src=\"https://www.cypress.io/_astro/navbar-brand.D87396b0.svg\" width=\"55\"/>\r * <img src=\"https://raw.githubusercontent.com/cucumber/.github/refs/heads/main/docs/img/cucumber-open-logo.png\" width=\"130\"/>\r * **Page Objects Pattern**",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"cypress:open": "cypress open"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cypress": "^13.15.2",
+		"prettier": "^3.3.3"
+	}
 }
