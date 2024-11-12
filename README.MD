@@ -5,8 +5,7 @@
 * <img src ="https://img.icons8.com/color/35/000000/javascript.png" width="30"/>
 * <img src="https://www.cypress.io/_astro/navbar-brand.D87396b0.svg" width="55"/>
 * <img src="https://raw.githubusercontent.com/cucumber/.github/refs/heads/main/docs/img/cucumber-open-logo.png" width="130"/>
-* 
-**Padrão Page Objects**
+* **Padrão Page Objects**
 
 ## Resumo:  
 
