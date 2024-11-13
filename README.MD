@@ -4,7 +4,6 @@ For detailed business rules, acceptance criteria, and the definition of done, pl
 
 [Business Rules Document, Acceptance Criteria, and Definition of Done](https://github.com/andradeg-luiza/demoQA/wiki/Business-Rules-Document,-Acceptance-Criteria,-and-Definition-of-Done)
 
-
 ## Directory Architecture
 
 | Structure                       | Description                                         |
