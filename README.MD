@@ -113,6 +113,38 @@ The Swagger for the challenge can be consulted at: https://demoqa.com/swagger/.
 
 -   Delete the newly created record
 
+#### Part 4
+
+**Step-by-Step:**
+
+-   Access the website [https://demoqa.com/](https://demoqa.com/)
+
+-   Choose the "Widgets" option on the homepage
+
+-   Click on the "Progress Bar" submenu
+
+-   Click the "Start" button
+
+-   Stop before reaching 25%
+
+-   Validate that the progress bar value is less than or equal to 25%
+
+-   Press "Start" again, and when it reaches 100%, reset the progress bar
+
+
+#### Part 5
+
+**Step-by-Step**:
+
+-  Access the website https://demoqa.com/
+
+-  Choose the "Interactions" option on the homepage
+
+-  Click on the "Sortable" submenu
+
+-  Using drag and drop methods, place the elements in ascending order
+
+
 **Additional Tasks**:
 
 -   Dynamically create 12 new records using Cucumber
