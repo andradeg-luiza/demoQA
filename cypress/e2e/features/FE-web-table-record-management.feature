@@ -1,5 +1,11 @@
 Feature: Web Table Record Management
 
+Scenario: Successfully navigating to the Web Tables
+  Given I am on the "https://demoqa.com/" website
+  When I navigate to the "Elements" section
+  And I select the "Web Tables" option
+  Then I should see the Web Tables page
+
 Scenario: Successfully creating a new record in Web Tables
   Given I am on the "https://demoqa.com/" website
   When I navigate to the "Elements" section
