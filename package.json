@@ -15,7 +15,8 @@
 		"prettier": "^3.3.3"
 	},
 	"devDependencies": {
-		"cypress-cucumber-preprocessor": "^4.3.1"
+		"cypress-cucumber-preprocessor": "^4.3.1",
+		"cypress-file-upload": "^5.0.8"
 	},
 	"cypress-cucumber-preprocessor": {
 		"nonGlobalStepDefinations": true,

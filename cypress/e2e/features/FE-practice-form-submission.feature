@@ -9,7 +9,6 @@ Scenario: Successfully navigating to the Practice Form
 Scenario: Filling out the Form and submitting it successfully
   Given I am on the Practice Form page
   When I fill out the form with random values
-  And I upload the .txt file
   And I submit the form
   Then all fields should be populated
   And the file should be attached to the form

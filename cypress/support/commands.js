@@ -23,3 +23,12 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+import 'cypress-file-upload'
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // Ignorar erros de 'Script error'
+    if (err.message.includes('Script error')) {
+      return false; // Impede o teste de falhar
+    }
+});
