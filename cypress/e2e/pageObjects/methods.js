@@ -11,6 +11,7 @@ export const methods = {
 
   navigateToUrl(url) {
     cy.visit(url);
+    locators.homePage.formsField().click();
   },
 
   openNewWindow() {

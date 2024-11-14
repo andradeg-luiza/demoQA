@@ -4,7 +4,6 @@ import { methods } from '../pageObjects/methods';
 
 Given('I am on the {string} website', (url) => {
   methods.navigateToUrl(url);
-  locators.homePage.formsField().click();
 });
 
 When('I navigate to the {string} section', (section) => {
