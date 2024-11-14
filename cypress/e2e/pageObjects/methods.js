@@ -47,11 +47,10 @@ export const methods = {
     locators.webTablesElementsMenu.deleteButton(rowIndex).click();
   },
 
-  fillPracticeForm(firstName, lastName, mobile, subject, currentAddress) {
+  fillPracticeForm(firstName, lastName, mobile, _subject, currentAddress) {
     locators.formsPracticeForm.nameField().type(firstName);
     locators.formsPracticeForm.lastNameField().type(lastName);
     locators.formsPracticeForm.mobileField().type(mobile);
-    locators.formsPracticeForm.subjectsField().type(subject);
     locators.formsPracticeForm.currentAddressField().type(currentAddress);
   },
 
