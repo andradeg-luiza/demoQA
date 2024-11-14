@@ -7,8 +7,8 @@ export const locators = {
 	leftList: {
 	  formsMenu: () => cy.get(':nth-child(2) > .group-header > .header-wrapper').should('be.visible'),
 	  practiceFormOption: () => cy.get(':nth-child(2) > .element-list > .menu-list > #item-0').should('be.visible'),
-	  alertsMenu: () => cy.get('div.left-pannel a[href="/alertsWindows"]').should('be.visible'),
-	  browserWindowOption: () => cy.get('div.left-pannel a[href="/browser-windows"]').should('be.visible'),
+	  alertsMenu: () => cy.get(':nth-child(3) > .group-header > .header-wrapper > .header-text').should('be.visible'),
+	  browserWindowOption: () => cy.get(':nth-child(3) > .element-list > .menu-list > #item-0').should('be.visible'),
 	  elementsMenu: () => cy.get('div.left-pannel a[href="/elements"]').should('be.visible'),
 	  webTablesOption: () => cy.get('div.left-pannel a[href="/webtables"]').should('be.visible'),
 	  widgetsMenu: () => cy.get('div.left-pannel a[href="/widgets"]').should('be.visible'),
@@ -42,9 +42,10 @@ export const locators = {
 	},
   
 	browserWindowsAlerts: {
-	  title: () => cy.get('div.practice-header h5').contains('Browser Windows').should('be.visible'),
+	  title: () => cy.get('.text-center').contains('Browser Windows').should('be.visible'),
 	  newWindowButton: () => cy.get('button#windowButton').should('be.visible'),
 	  newWindowMessage: () => cy.contains('This is a sample page').should('be.visible'),
+	  popupMessageSampleHeading: () => cy.get('h1#sampleHeading').should('be.visible'),
 	},
   
 	webTablesElementsMenu: {

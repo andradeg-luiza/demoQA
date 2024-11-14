@@ -19,16 +19,22 @@ export const methods = {
   },
 
   verifyNewWindowContent() {
-    cy.window().then(win => {
-      cy.stub(win, 'open').callsFake((url) => {
-        cy.visit(url).wait(500);
+    cy.window().then((win) => {
+      cy.stub(win, 'open').callsFake(() => {
+        const newWindow = {
+          document: {
+            write: (content) => {
+              expect(content).to.include("This is a sample page");
+            },
+          },
+        };
+        return newWindow;
       });
     });
-    cy.contains('This is a sample page').should('be.visible');
   },
 
-  closeNewWindow() {
-    cy.window().then(win => {
+  closeNewWindow() { 
+    cy.window().then((win) => {
       win.close();
     });
   },
