@@ -1,17 +1,14 @@
-import Sortable from "../pages/sortable_pages"
-const sortable = new Sortable
+import SortablePage from "../pages/sortable_pages";
+const sortablePage = new SortablePage();
 
-
-Given(/^I access the website "([^"]*)"$/, (args1) => {
-	console.log(args1);
-	return true;
+Given(/^I access the website "([^"]*)"$/, (url) => {
+  sortablePage.navigateToUrl(url);
 });
 
 When(/^I drag and drop the elements to arrange them in ascending order$/, () => {
-	return true;
+  sortablePage.dragAndDropItems();
 });
 
-Then(/^the list should display the numbers in the correct order: "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)"$/, (args1,args2,args3,args4,args5,args6) => {
-	console.log(args1,args2,args3,args4,args5,args6);
-	return true;
+Then(/^the list should display the numbers in the correct order: "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)"$/, (item1, item2, item3, item4, item5, item6) => {
+  sortablePage.verifyListOrder();
 });

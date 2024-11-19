@@ -20,5 +20,6 @@ class formsPractice {
     citySelect = () => { return 'div#city' }
     cityDropdown = () => { return 'div#city input' }
     submitButton = () => { return 'button#submit' }
+    closeButton = () => { return '#closeLargeModal'}
 }
 export default formsPractice;

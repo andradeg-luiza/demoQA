@@ -1,36 +1,38 @@
-import ProgressBar from "../pages/progressBar_pages"
-const progressBar = new ProgressBar
+import ProgressBarPage from "../pages/progressBar_pages";
+const progressBarPage = new ProgressBarPage();
 
-Given(/^I access the website "([^"]*)"$/, (args1) => {
-	console.log(args1);
-	return true;
+Given(/^I access the website "([^"]*)"$/, (url) => {
+    progressBarPage.navigateToUrl(url);
 });
 
-When(/^I click the "([^"]*)" button$/, (args1) => {
-	console.log(args1);
-	return true;
+When(/^I click the "([^"]*)" button$/, (buttonText) => {
+    if (buttonText === "Start") {
+        progressBarPage.clickStartButton();
+    } else if (buttonText === "Reset") {
+        progressBarPage.clickResetButton();
+    }
 });
 
 When(/^I stop the progress bar before it reaches 25%$/, () => {
-	return true;
+    progressBarPage.stopProgressBefore25();
 });
 
 Then(/^the progress bar value should be less than or equal to 25%$/, () => {
-	return true;
+    progressBarPage.verifyProgressBarLessThan25();
 });
 
 When(/^I let the progress bar reach 100%$/, () => {
-	return true;
+    progressBarPage.letProgressBarReach100();
 });
 
 Then(/^the progress bar value should be 100%$/, () => {
-	return true;
+    progressBarPage.verifyProgressBarEqual100();
 });
 
 When(/^I reset the progress bar$/, () => {
-	return true;
+    progressBarPage.clickResetButton();
 });
 
 Then(/^the progress bar value should be reset to 0%$/, () => {
-	return true;
+    progressBarPage.verifyProgressBarReset();
 });
