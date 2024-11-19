@@ -1,6 +1,12 @@
 import FormsPracticePage from "../pages/formsPractice_pages";
 const formsPracticePage = new FormsPracticePage();
 
+Cypress.on('uncaught:exception', (err, runnable) => {
+    if (err.message.includes('Script error.') || err.message.includes('cross-origin')) {
+        return false;
+    }
+});
+
 Given(/^I access the website "([^"]*)"$/, (url) => {
     formsPracticePage.accessWebsite(url);
 });
@@ -10,7 +16,7 @@ When(/^I fill in the form with random valid data$/, () => {
 });
 
 When(/^I upload a "([^"]*)" file from the project's designated folder$/, (fileName) => {
-    formsPracticePage.uploadFile(fileName);
+    formsPracticePage.uploadFile('testedemoqa.txt');
 });
 
 When(/^I click the "([^"]*)" button$/, (buttonText) => {

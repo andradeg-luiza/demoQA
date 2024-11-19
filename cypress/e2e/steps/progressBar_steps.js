@@ -1,6 +1,12 @@
 import ProgressBarPage from "../pages/progressBar_pages";
 const progressBarPage = new ProgressBarPage();
 
+Cypress.on('uncaught:exception', (err, runnable) => {
+    if (err.message.includes('Script error.') || err.message.includes('cross-origin')) {
+        return false;
+    }
+});
+
 Given(/^I access the website "([^"]*)"$/, (url) => {
     progressBarPage.navigateToUrl(url);
 });

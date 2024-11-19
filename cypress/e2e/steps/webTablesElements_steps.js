@@ -1,6 +1,12 @@
 import WebTablesElementsPage from "../pages/webTablesElements_pages";
 const webTablesElementsPage = new WebTablesElementsPage();
 
+Cypress.on('uncaught:exception', (err, runnable) => {
+  if (err.message.includes('Script error.') || err.message.includes('cross-origin')) {
+    return false;
+  }
+});
+
 Given(/^I access the website "([^"]*)"$/, (url) => {
   webTablesElementsPage.navigateToUrl(url);
 });

@@ -1,6 +1,6 @@
-/// <reference types="Cypress" /> 
+/// <reference types="Cypress" />
 
-import FormsPractice from "../elements/formsPractice"
+import FormsPractice from "../elements/formsPractice";
 const formsPractice = new FormsPractice();
 
 class FormsPracticePage {
@@ -21,9 +21,9 @@ class FormsPracticePage {
     cy.get(formsPractice.hobbiesReading()).click();
     cy.get(formsPractice.currentAddressField()).type('123 Main St, Springfield');
     cy.get(formsPractice.stateSelect()).click();
-    cy.get(formsPractice.stateDropdown()).type('Uttar Pradesh');
+    cy.get(formsPractice.stateDropdown()).type('Uttar Pradesh{enter}');
     cy.get(formsPractice.citySelect()).click();
-    cy.get(formsPractice.cityDropdown()).type('Agra');
+    cy.get(formsPractice.cityDropdown()).type('Agra{enter}');
   }
 
   uploadFile(fileName) {

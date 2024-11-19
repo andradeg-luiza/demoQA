@@ -1,6 +1,12 @@
 import SortablePage from "../pages/sortable_pages";
 const sortablePage = new SortablePage();
 
+Cypress.on('uncaught:exception', (err, runnable) => {
+  if (err.message.includes('Script error.') || err.message.includes('cross-origin')) {
+    return false;
+  }
+});
+
 Given(/^I access the website "([^"]*)"$/, (url) => {
   sortablePage.navigateToUrl(url);
 });
