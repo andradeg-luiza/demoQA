@@ -11,7 +11,7 @@ Given(/^I access the website "([^"]*)"$/, (url) => {
     browserWindowsAlertsPage.accessWebsite(url);
 });
 
-When(/^I click the "([^"]*)" button$/, (buttonText) => {
+When(/^I click the "([^"]*)"$/, (buttonText) => {
     browserWindowsAlertsPage.clickNewWindowButton();
 });
 
