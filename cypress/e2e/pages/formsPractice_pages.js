@@ -17,8 +17,10 @@ class FormsPracticePage {
     cy.get(formsPractice.dobMonth()).select('January');
     cy.get(formsPractice.dobYear()).select('1990');
     cy.get(formsPractice.dobDay()).click();
+
     cy.get(formsPractice.subjectField()).type('Math');
-    cy.get(formsPractice.subjectField()).type('{tab}');
+    cy.realPress('Tab');
+
     cy.get(formsPractice.hobbiesSports()).click();
     cy.get(formsPractice.hobbiesReading()).click();
     cy.get(formsPractice.currentAddressField()).type('123 Main St, Springfield');
