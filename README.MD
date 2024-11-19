@@ -10,14 +10,13 @@ For detailed business rules, acceptance criteria, and the definition of done, pl
 | ------------------------------- | --------------------------------------------------- |
 | / - /`cypress`                  | Main Cypress folder for E2E testing.                |
 | / - / - /`e2e`                  | Contains End-to-End tests organized in subfolders.  |
-| / - / - / - / `features`        | Contains `.feature` files for the tests.            |
-| / - / - / - / `locators`        | Defines the element selectors for the tests.        |
-| / - / - / - / `pageObjects`     | Contains page objects with reusable methods.        |
-| / - / - / - /`step_definitions` | Defines the Cucumber steps for the tests.           |
+| / - / - / - / `elements`        | Defines the element selectors for the tests.        |
+| / - / - / - / `feature`         | Contains `.feature` files for the tests.            |
+| / - / - / - / `page`            | Contains page with reusable methods.                |
+| / - / - / - /`step`             | Defines the Cucumber steps for the tests.           |
 | / - / - / `fixtures`            | Contains static data used in the tests.             |
 | / - / - / `support`             | Support scripts, such as custom commands.           |
 | / - / `.gitignore`              | Lists files and folders to be ignored by Git.       |
-| / - / `.prettierrc`             | Prettier configuration for code formatting.         |
 | / - / `cypress.config.js`       | Cypress configuration file                          |
 | / - / `package-lock.json`       | File that locks npm dependencies versions.          |
 | / - / `package.json`            | Contains project dependencies and scripts.          |
