@@ -39,11 +39,16 @@ class FormsPracticePage {
   }
 
   verifyPopup() {
-    cy.get(formsPractice.modalTitle()).should('contain', 'Thanks for submitting the form');
+    cy.wait(1000);
+    cy.get(formsPractice.modalScreen())
+      .should('be.visible')
+      .within(() => {
+        cy.get(formsPractice.modalTitle()).should('contain', 'Thanks for submitting the form');
+      });
   }
 
   closePopup() {
-    cy.get(formsPractice.closeButton()).click();
+    cy.get(formsPractice.closeButton()).click({ force: true });
   }
 }
 

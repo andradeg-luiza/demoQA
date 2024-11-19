@@ -21,7 +21,8 @@ class formsPractice {
     citySelect = () => { return 'div#city' }
     cityDropdown = () => { return 'div#city input' }
     submitButton = () => { return 'button#submit' }
-    modalTitle = () => { return 'input#example-modal-sizes-title-lg' }
-    closeButton = () => { return 'input#closeLargeModal' }
+    modalScreen = () => { return '.modal-content' }
+    modalTitle = () => { return '#example-modal-sizes-title-lg' }
+    closeButton = () => { return '#closeLargeModal' }
 }
 export default formsPractice;
