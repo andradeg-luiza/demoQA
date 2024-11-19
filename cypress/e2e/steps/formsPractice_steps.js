@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 import FormsPracticePage from "../pages/formsPractice_pages";
 const formsPracticePage = new FormsPracticePage();
 
