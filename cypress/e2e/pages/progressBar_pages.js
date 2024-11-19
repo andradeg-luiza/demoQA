@@ -1,6 +1,6 @@
 /// <reference types="Cypress" /> 
 
-import ProgressBar from "../elements/progressBar"
+import ProgressBar from "../elements/progressBar_elements"
 const progressBar = new ProgressBar();
 
 class ProgressBarPage {

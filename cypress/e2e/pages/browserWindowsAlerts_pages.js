@@ -1,6 +1,6 @@
 /// <reference types="Cypress" /> 
 
-import BrowserWindowsAlerts from "../elements/formsPractice"
+import BrowserWindowsAlerts from "../elements/formsPractice_elements"
 const browserWindowsAlerts = new BrowserWindowsAlerts();
 
 class BrowserWindowsAlertsPage {

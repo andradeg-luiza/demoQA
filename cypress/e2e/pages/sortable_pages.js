@@ -1,6 +1,6 @@
 /// <reference types="Cypress" /> 
 
-import Sortable from "../elements/sortable"
+import Sortable from "../elements/sortable_elements"
 const sortable = new Sortable();
 
 class SortablePage {

@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import FormsPractice from "../elements/formsPractice";
+import FormsPractice from "../elements/formsPractice_elements";
 const formsPractice = new FormsPractice();
 
 class FormsPracticePage {

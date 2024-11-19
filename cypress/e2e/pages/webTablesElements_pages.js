@@ -1,6 +1,6 @@
 /// <reference types="Cypress" /> 
 
-import WebTablesElements from "../elements/webTablesElements"
+import WebTablesElements from "../elements/webTablesElements_elements"
 const webTablesElements = new WebTablesElements();
 
 class WebTablesElementsPage {
