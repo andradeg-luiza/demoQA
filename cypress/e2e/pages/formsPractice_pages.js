@@ -39,7 +39,7 @@ class FormsPracticePage {
   }
 
   verifyPopup() {
-    cy.get(formsPractice.title()).should('contain', 'Thanks for submitting the form');
+    cy.get(formsPractice.modalTitle()).should('contain', 'Thanks for submitting the form');
   }
 
   closePopup() {
