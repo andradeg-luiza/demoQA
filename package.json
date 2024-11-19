@@ -6,5 +6,8 @@
   "cypress-cucumber-preprocessor": {
     "nonGobalStepsDefinitions": false,
     "step_definitions": "cypress/e2e/steps"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0"
   }
 }
