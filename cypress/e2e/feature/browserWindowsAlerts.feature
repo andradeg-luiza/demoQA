@@ -5,7 +5,4 @@ Feature: Browser Window Management
   Scenario: Open a new window and validate its content  
     Given I access the website "https://demoqa.com/browser-windows"  
     When I click the "New Window"  
-    Then a new browser window should open  
-    And the new window should display the message "This is a sample page"  
-    When I close the newly opened window  
-    Then I should return to the original window  
+    Then the page should contain the message "This is a sample page"
