@@ -1,7 +1,7 @@
 class progressBar {
     title = () => { return 'h5' }
-    startButton = () => { return '#startStopButton' }
-    progressBar = () => { return '.progress-bar' }
+    progressBar = () => { return '.progress-bar.bg-info' }
+    startStopButton = () => { return '#startStopButton' }
     resetButton = () => { return '#resetButton' }
 }
 export default progressBar;

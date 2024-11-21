@@ -1,44 +1,41 @@
+/// <reference types="Cypress" /> 
+
 import ProgressBarPage from "../pages/progressBar_pages";
 const progressBarPage = new ProgressBarPage();
-
-Cypress.on('uncaught:exception', (err, runnable) => {
-    if (err.message.includes('Script error.') || err.message.includes('cross-origin')) {
-        return false;
-    }
-});
 
 Given(/^I access the website "([^"]*)"$/, (url) => {
     progressBarPage.navigateToUrl(url);
 });
 
-When(/^I click the "([^"]*)" button$/, (buttonText) => {
-    if (buttonText === "Start") {
+When(/^I click the "([^"]*)" button on the page$/, (buttonName) => {
+    if (buttonName === "Start") {
         progressBarPage.clickStartButton();
-    } else if (buttonText === "Reset") {
+    } else if (buttonName === "Reset") {
         progressBarPage.clickResetButton();
     }
 });
 
-When(/^I stop the progress bar before it reaches 25%$/, () => {
-    progressBarPage.stopProgressBefore25();
+When(/^I stop the progress bar$/, () => {
+    progressBarPage.stopProgressBar(); // Pausa o progresso ao clicar novamente
 });
 
-Then(/^the progress bar value should be less than or equal to 25%$/, () => {
-    progressBarPage.verifyProgressBarLessThan25();
+Then(/^the progress bar value should be equal to 25%$/, () => {
+    progressBarPage.verifyProgressBarEqual25(); // Verifica se o progresso é aproximadamente 25%
 });
 
-When(/^I let the progress bar reach 100%$/, () => {
-    progressBarPage.letProgressBarReach100();
+//TODO corrigir daqui em diante, o método para alcançar 100% não funciona
+When(/^the progress bar reaches 100%$/, () => {
+    progressBarPage.letProgressBarReach100(); // Espera o progresso atingir 100%
 });
 
 Then(/^the progress bar value should be 100%$/, () => {
-    progressBarPage.verifyProgressBarEqual100();
+    progressBarPage.verifyProgressBarEqual100(); // Verifica se o progresso é 100%
 });
 
 When(/^I reset the progress bar$/, () => {
     progressBarPage.clickResetButton();
 });
 
-Then(/^the progress bar value should be reset to 0%$/, () => {
-    progressBarPage.verifyProgressBarReset();
+Then(/^the progress bar value should be 0%$/, () => {
+    progressBarPage.verifyProgressBarReset(); // Verifica se o progresso foi resetado para 0%
 });
