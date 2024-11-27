@@ -1,6 +1,6 @@
 /// <reference types="Cypress" /> 
 
-import Sortable from "../elements/sortable_elements"
+import Sortable from "../elements/sortable_elements";
 const sortable = new Sortable();
 
 class SortablePage {
@@ -9,21 +9,21 @@ class SortablePage {
   }
 
   dragAndDropItems() {
-    const items = cy.get(sortable.sortableItems());
+    cy.get(sortable.sortableItems()).then((items) => {
+      const positions = Array.from(items).map((el, idx) => el.offsetTop);
 
-    cy.get(sortable.dragItem(1)).trigger('dragstart');
-    cy.get(sortable.dragItem(2)).trigger('dragover').trigger('drop');
-    cy.get(sortable.dragItem(3)).trigger('dragstart');
-    cy.get(sortable.dragItem(4)).trigger('dragover').trigger('drop');
-    cy.get(sortable.dragItem(5)).trigger('dragstart');
-    cy.get(sortable.dragItem(6)).trigger('dragover').trigger('drop');
+      cy.get(sortable.dragItem(1))
+        .trigger("mousedown", { which: 1, force: true })
+        .trigger("mousemove", { clientY: positions[5] })
+        .trigger("mouseup", { force: true });
+
+      // Continue o mesmo processo para os outros itens...
+    });
   }
 
-  verifyListOrder() {
-    const expectedOrder = ["one", "two", "three", "four", "five", "six"];
-
+  verifyListOrder(expectedOrder) {
     cy.get(sortable.sortableItems()).each((item, index) => {
-      cy.wrap(item).should('contain.text', expectedOrder[index]);
+      cy.wrap(item).should('have.text', expectedOrder[index]);
     });
   }
 }
