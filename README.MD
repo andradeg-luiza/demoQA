@@ -24,7 +24,7 @@ For detailed business rules, acceptance criteria, and the definition of done, pl
 
 ## Flowchart
 
-![Imagem](cypress/fixtures/flowchart.png)
+![Imagem](./cypress/fixtures/flowchart.png)
 
 ## Tools Used
 
