@@ -22,6 +22,10 @@ For detailed business rules, acceptance criteria, and the definition of done, pl
 | / - / `package.json`            | Contains project dependencies and scripts.          |
 | / - / `README.MD`               | Project description, instructions, and information. |
 
+## Flowchart
+
+![Imagem](../fixtures/flowchart.png)
+
 ## Tools Used
 
 ### Tools and Patterns
